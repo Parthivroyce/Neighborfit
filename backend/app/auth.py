@@ -6,7 +6,6 @@ from jose import jwt
 
 from app.users import users_db, pwd_context
 
-# Secret key for JWT encoding (keep this secret!)
 SECRET_KEY = "secret_neighborfit_key"
 ALGORITHM = "HS256"
 
@@ -16,8 +15,15 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
+class RegisterForm(BaseModel):
+    username: str
+    password: str
+
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
 
 def authenticate_user(username: str, password: str):
     user = users_db.get(username)
@@ -39,3 +45,17 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
     }
     token = jwt.encode(token_data, SECRET_KEY, algorithm=ALGORITHM)
     return {"access_token": token, "token_type": "bearer"}
+
+@router.post("/register", status_code=201)
+def register_user(form: RegisterForm):
+    if form.username in users_db:
+        raise HTTPException(status_code=400, detail="Username already exists")
+    
+    hashed_password = get_password_hash(form.password)
+    users_db[form.username] = {
+        "username": form.username,
+        "hashed_password": hashed_password,
+        "full_name": form.username.title(),
+        "disabled": False
+    }
+    return {"msg": "User registered successfully"}
