@@ -109,3 +109,45 @@ Pie Chart: Shows pet-friendly and green space distributions
 Cards: Detailed neighborhood attributes with match score
 
 Export: Download top matches as PDF and CSV
+
+
+
+
+
+## 🧾 Sample /match Response
+
+Here’s a [sample-match-response.json](https://github.com/Parthivroyce/Neighborfit/blob/main/docs/sample-match-response.json) file showcasing the actual API response from the `/match` endpoint.
+
+```json
+{
+  "matches": [
+    {
+      "name": "Lakeside View",
+      "budget": 3,
+      "commute_time": 2,
+      "noise_tolerance": 3,
+      "pet_friendly": true,
+      "green_spaces": true,
+      "score": 1.0
+    },
+    {
+      "name": "Metro Garden",
+      "budget": 4,
+      "commute_time": 3,
+      "noise_tolerance": 3,
+      "pet_friendly": true,
+      "green_spaces": true,
+      "score": 0.8875
+    },
+    {
+      "name": "Skyline District",
+      "budget": 5,
+      "commute_time": 1,
+      "noise_tolerance": 5,
+      "pet_friendly": true,
+      "green_spaces": true,
+      "score": 0.725
+    }
+  ]
+}
+
