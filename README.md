@@ -109,4 +109,6 @@ POST /match → Submit preferences and receive matched neighborhoods
 
 
 📦 Deployment
-🔧 Backend: Railway - FastAPI Deployment
+🔧 Backend: Railway - FastAPI Deployment  at https://neighborfit-production.up.railway.app/
+💻 Frontend: on Vercel - https://neighborfit-xi.vercel.app
+
