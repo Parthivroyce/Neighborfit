@@ -4,6 +4,7 @@ NeighborFit is a full-stack web application that intelligently matches users wit
 
 ---
 
+
 ## 🚀 Features
 
 - 🔐 Secure Login & Registration (JWT-based)
