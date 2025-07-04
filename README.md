@@ -100,11 +100,12 @@ POST /match → Submit preferences and receive matched neighborhoods
 📊 Sample /match Response
 📁 JSON file: sample-match-response.json
 
-🖼️ Screenshot Preview:
+🖼️  🖼️ Screenshot Preview
 
-Screenshot 1	Screenshot 2
-	![sample-match-response-2](https://github.com/user-attachments/assets/336a2bc7-7a2d-44a9-9554-265230e06903)
-![sample-match-response-1](https://github.com/user-attachments/assets/ebca3c11-3264-41c9-9d0d-89ff559a0c4b)
+| Screenshot 1 | Screenshot 2 |
+|--------------|--------------|
+| ![sample1](docs/sample-match-response-1.png) | ![sample2](docs/sample-match-response-2.png) |
+
 
 
 📦 Deployment
