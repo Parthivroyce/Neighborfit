@@ -10,6 +10,8 @@ import { CSVLink } from 'react-csv';
 import { Toaster, toast } from 'react-hot-toast';
 
 function App() {
+  const BASE_URL = "https://neighborfit-production.up.railway.app";
+
   const [form, setForm] = useState({
     budget: 3,
     commute_time: 2,
@@ -37,7 +39,7 @@ function App() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://127.0.0.1:8000/login', {
+      const res = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
@@ -58,7 +60,7 @@ function App() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://127.0.0.1:8000/register", {
+      const res = await fetch(`${BASE_URL}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -95,7 +97,7 @@ function App() {
     setResult([]);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/match", {
+      const res = await fetch(`${BASE_URL}/match`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
