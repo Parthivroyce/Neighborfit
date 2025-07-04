@@ -4,7 +4,6 @@ NeighborFit is a full-stack web application that intelligently matches users wit
 
 ---
 
-
 ## 🚀 Features
 
 - 🔐 Secure Login & Registration (JWT-based)
@@ -17,9 +16,6 @@ NeighborFit is a full-stack web application that intelligently matches users wit
 ---
 
 ## 📁 Project Structure
-
-# Neighborfit
-Full-stack project for neighborhood-lifestyle matching — TruEState SDE Assignment.
 
 Neighborfit/
 │
@@ -38,7 +34,10 @@ Neighborfit/
 │ ├── App.js # Main React App
 │ ├── index.css # TailwindCSS styles
 │
-├── docs/ # Supporting documentation & diagrams
+├── docs/ # Supporting documentation
+│ ├── sample-match-response.json
+│ ├── sample-match-response-1.png
+│ └── sample-match-response-2.png
 └── README.md
 
 yaml
@@ -86,68 +85,27 @@ npm install
 npm start
 Access frontend at: http://localhost:3000
 
+✅ Live Backend API (FastAPI)
+Base URL: https://neighborfit-production.up.railway.app
+
+Available Endpoints:
+GET / → Health check (returns "NeighborFit Backend is Running 🚀")
+
+POST /register → Register a new user
+
+POST /login → Login with username/password (returns JWT token)
+
+POST /match → Submit preferences and receive matched neighborhoods
+
+📊 Sample /match Response
+📁 JSON file: sample-match-response.json
+
+🖼️ Screenshot Preview:
+
+Screenshot 1	Screenshot 2
+	![sample-match-response-2](https://github.com/user-attachments/assets/336a2bc7-7a2d-44a9-9554-265230e06903)
+![sample-match-response-1](https://github.com/user-attachments/assets/ebca3c11-3264-41c9-9d0d-89ff559a0c4b)
 
 
-
-## ✅ Live Backend API (FastAPI)
-
-Base URL: [https://neighborfit-production.up.railway.app](https://neighborfit-production.up.railway.app)
-
-### Available Endpoints:
-
-- `GET /` → Health check (returns `"NeighborFit Backend is Running 🚀"`)
-- `POST /register` → Register a new user
-- `POST /login` → Login with username/password (returns JWT token)
-- `POST /match` → Submit preferences and receive matched neighborhoods
-
-
-📊 Sample Features & Insights
-Bar Chart: Compares Budget, Commute, Noise across matched neighborhoods
-
-Pie Chart: Shows pet-friendly and green space distributions
-
-Cards: Detailed neighborhood attributes with match score
-
-Export: Download top matches as PDF and CSV
-
-
-
-
-
-## 🧾 Sample /match Response
-
-Here’s a [sample-match-response.json](https://github.com/Parthivroyce/Neighborfit/blob/main/docs/sample-match-response.json) file showcasing the actual API response from the `/match` endpoint.
-
-```json
-{
-  "matches": [
-    {
-      "name": "Lakeside View",
-      "budget": 3,
-      "commute_time": 2,
-      "noise_tolerance": 3,
-      "pet_friendly": true,
-      "green_spaces": true,
-      "score": 1.0
-    },
-    {
-      "name": "Metro Garden",
-      "budget": 4,
-      "commute_time": 3,
-      "noise_tolerance": 3,
-      "pet_friendly": true,
-      "green_spaces": true,
-      "score": 0.8875
-    },
-    {
-      "name": "Skyline District",
-      "budget": 5,
-      "commute_time": 1,
-      "noise_tolerance": 5,
-      "pet_friendly": true,
-      "green_spaces": true,
-      "score": 0.725
-    }
-  ]
-}
-
+📦 Deployment
+🔧 Backend: Railway - FastAPI Deployment
