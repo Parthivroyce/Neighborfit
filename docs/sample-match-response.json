@@ -1,0 +1,49 @@
+{
+  "matches": [
+    {
+      "name": "Lakeside View",
+      "budget": 3,
+      "commute_time": 2,
+      "noise_tolerance": 3,
+      "pet_friendly": true,
+      "green_spaces": true,
+      "score": 1.0
+    },
+    {
+      "name": "Metro Garden",
+      "budget": 4,
+      "commute_time": 3,
+      "noise_tolerance": 3,
+      "pet_friendly": true,
+      "green_spaces": true,
+      "score": 0.8875
+    },
+    {
+      "name": "Skyline District",
+      "budget": 5,
+      "commute_time": 1,
+      "noise_tolerance": 5,
+      "pet_friendly": true,
+      "green_spaces": true,
+      "score": 0.725
+    },
+    {
+      "name": "Tech Valley",
+      "budget": 3,
+      "commute_time": 1,
+      "noise_tolerance": 2,
+      "pet_friendly": true,
+      "green_spaces": false,
+      "score": 0.7
+    },
+    {
+      "name": "Parkside Haven",
+      "budget": 2,
+      "commute_time": 4,
+      "noise_tolerance": 2,
+      "pet_friendly": false,
+      "green_spaces": true,
+      "score": 0.6375
+    }
+  ]
+}
