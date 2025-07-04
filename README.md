@@ -100,7 +100,7 @@ POST /match → Submit preferences and receive matched neighborhoods
 📊 Sample /match Response
 📁 JSON file: sample-match-response.json
 
-🖼️  🖼️ Screenshot Preview
+🖼️ Screenshot Preview
 
 | Screenshot 1 | Screenshot 2 |
 |--------------|--------------|
