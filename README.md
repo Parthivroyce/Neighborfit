@@ -85,6 +85,21 @@ npm install
 npm start
 Access frontend at: http://localhost:3000
 
+
+
+
+## ✅ Live Backend API (FastAPI)
+
+Base URL: [https://neighborfit-production.up.railway.app](https://neighborfit-production.up.railway.app)
+
+### Available Endpoints:
+
+- `GET /` → Health check (returns `"NeighborFit Backend is Running 🚀"`)
+- `POST /register` → Register a new user
+- `POST /login` → Login with username/password (returns JWT token)
+- `POST /match` → Submit preferences and receive matched neighborhoods
+
+
 📊 Sample Features & Insights
 Bar Chart: Compares Budget, Commute, Noise across matched neighborhoods
 
